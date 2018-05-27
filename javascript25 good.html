@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            padding:0;
+        }
+        li{
+            height: 200px;
+            width:400px;
+            background: #777;
+            list-style: none;
+        }
+        ul li:nth-child(1){
+            background: #eee;
+        }
+        .box{
+            position: relative;
+            width:400px;
+            height:200px;
+            overflow: hidden;
+        }
+        .circle{
+            position: absolute;
+            left:50%;
+            margin-left: -50px;
+            bottom: 10px;
+        }
+        .circle span{
+            float: left;
+            width:18px;
+            height:18px;
+            background: rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 18px;
+            margin: 5px;
+        }
+
+    </style>
+
+    <script>
+        window.onload = function () {
+            var scroll = document.getElementById("scroll");
+            var circle = document.createElement("div");
+            circle.className = 'circle';
+            scroll.appendChild(circle);
+            var ul = document.getElementById("ul");
+            var lis = ul.children;
+            console.log(lis.length);
+
+            for(var i=0;i<lis.length;i++){
+                var newSpan = document.createElement("span");
+                newSpan.innerHTML = i+1
+                circle.appendChild(newSpan);
+
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+
+    <div class="box">
+        <div class="slider" id="scroll">
+            <ul id="ul">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!--<div class="circle">-->
+            <!--<span>1</span>-->
+            <!--<span>2</span>-->
+            <!--<span>3</span>-->
+            <!--<span>4</span>-->
+            <!--<span>5</span>-->
+            <!--<span>6</span>-->
+        <!--</div>-->
+    </div>
+
+
+
+</body>
+</html>

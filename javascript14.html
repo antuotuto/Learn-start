@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .an{
+            background: #000;
+            color:#fff;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var btns = document.getElementsByTagName("button");
+                for(var i = 0;i<btns.length;i++){
+                    btns[i].onclick = function () {
+                        for(var i = 0;i<btns.length;i++){
+                            btns[i].className = '';
+                        }
+                        this.className = 'an';
+                    }
+                }
+        }
+    </script>
+</head>
+<body>
+
+    <button>喜欢瑶瑶</button>
+    <button>喜欢瑶瑶</button>
+    <button>喜欢瑶瑶</button>
+    <button>喜欢瑶瑶</button>
+    <button>喜欢瑶瑶</button>
+
+
+
+
+</body>
+</html>

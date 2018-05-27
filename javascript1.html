@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+
+            window.onload = function () {
+                function $(id) {
+                    return document.getElementById(id)
+                }
+                $('txt').oninput = function () {
+                    if(this.value == ''){
+                        $('message').style.display = "block";
+                    }else{
+                        $('message').style.display = "none";
+                    }
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+
+    <input type="text" id="txt">
+
+    <label for="txt" id="message">必败的国际大牌</label>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            height:50px;
+            width:50px;
+            background: #eeeeee;
+            margin:10px;
+        }
+    </style>
+    <script>
+
+        window.onload = function () {
+            function getClass( className,id) {
+                if(document.getElementsByClassName){
+                    if(id){
+                        var eleId = document.getElementById(id);
+                        return eleId.getElementsByClassName(className);
+                    }else {
+                        return document.getElementsByClassName(className);
+                    }
+                }
+
+//                if(id){
+//                    var eleId = document.getElementById(id);
+//                    var dom = eleId.getElementsByTagName("*");
+//                }else {
+//                    var dom = document.getElementsByTagName("*");
+//                }
+//
+//                var arr = [];
+//                for(var i = 0;i<dom.length;i++){
+//                    var txtarr = dom[i].className.split(" ");
+//                    for(var j = 0;j<txtarr.length;j++){
+//                        if(txtarr[j] == className){
+//                            arr.push(dom[i]);
+//                        }
+//                    }
+//                }
+                return arr;
+            }
+            console.log(getClass("test","one").length);
+
+        }
+
+    </script>
+</head>
+<body>
+    <div class="test"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div id="one" class="test"></div>
+
+</body>
+</html>

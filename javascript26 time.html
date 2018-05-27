@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+
+            var box = document.getElementById("date");
+            var boys = box.children;
+
+            var arr = ["星期天","星期一","星期二","星期三","星期四","星期五","星期六"]
+            var date = new Date();
+            boys[0].innerHTML = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDay() + " " + arr[date.getDay()] ;
+            boys[1].innerHTML = date.getDate();
+        }
+    </script>
+</head>
+<body>
+
+    <div class="box" id="date">
+        <p></p>
+        <span></span>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: #000;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+
+            var sel = document.getElementById("sel");
+            sel.onchange = function () {
+                switch(this.value){
+                    case "1":
+                        document.body.style.backgroundColor = "red";
+                        break;
+                    case "2":
+                        document.body.style.backgroundColor = "#eee";
+                        break;
+                    case "3":
+                        document.body.style.backgroundColor = "green";
+                        break;
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+
+
+<select name="" id="sel">
+    <option value="1">王安安</option>
+    <option value="2">孙瑶瑶</option>
+    <option value="3">王一</option>
+    <option value="4">王子</option>
+</select>
+
+
+</body>
+</html>

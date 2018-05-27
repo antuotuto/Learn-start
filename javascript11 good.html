@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.onload = function () {
+
+                var txt = document.getElementById('txt');
+
+                txt.focus();
+
+
+                txt.onfocus = function () {
+                    txt.value = '';
+                    if(txt.value == "请输入...."){
+                        txt.value = '';
+                    }
+                };
+
+
+                txt.onblur = function () {
+                    console.log("失去了焦点");
+                    if(this.value == ""){
+                        this.value = "请输入....";
+                        this.style.color = "#777"
+                    }else if(isNaN(this.value)){
+                        this.style.color = "red";
+                        this.value = "请输入数字";
+                    }
+                };
+
+                txt.onmouseover = function () {
+                    this.select();
+                }
+
+
+
+            }
+        </script>
+    </head>
+    <body>
+
+        <div class="search">
+            <input type="text" value="请输入...."  id="txt">
+            <button>查询</button>
+        </div>
+
+
+
+    </body>
+</html>

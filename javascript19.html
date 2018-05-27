@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.onload = function () {
+                var txt = document.getElementById("txt");
+                var btn = document.getElementById("btn");
+
+                btn.onclick = function () {
+                    console.log(1);
+                    var val = txt.value;
+                    switch(val){
+                        case "苹果":
+                            alert(5);
+                            break;
+                        case "香蕉":
+                            alert(2);
+                            break;
+                        case "梨子":
+                            alert(1.5);
+                            break;
+                        case "大白菜":
+                            alert(0.9);
+                            break;
+                            console.log(2);
+
+
+                    }
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+
+    <input type="text" id="txt">  <button id="btn">查询价格</button>
+
+    </body>
+</html>

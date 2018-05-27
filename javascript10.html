@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.onload = function () {
+                function $(id) {
+                    return document.getElementById(id)
+                }
+                $('btn').onclick = function () {
+                    var a = $('txt').value ;
+                    if(a == "王安"){
+                        console.log("王安")
+                    }else{
+                        console.log("错误")
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <input type="text" value="请输入" id="txt"> <button id="btn">查询</button>
+    </body>
+</html>

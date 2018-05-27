@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>movie</title>
+    <style>
+        html{
+            height:100%;
+        }
+        body{
+            height:100%;
+            width:100%;
+            margin:0;
+            padding:0;
+        }
+        #movie{
+            height:100%;
+            width:100%;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+        #movie div{
+            height:100%;
+            width:100%;
+            text-align: center;
+            line-height:100vh;
+            font-size: 50px;
+            position: absolute;
+            top:0;
+            left:0;
+            opacity: 0;
+            background: #777;
+            transition: 3s;
+        }
+        #movie div.active{
+            opacity: 1;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            function $(id) {
+                return document.getElementById(id)
+            }
+
+            var divs = $("movie").children
+            var time = null;
+            $("movie").onmouseover = function () {
+                time= setInterval(function () {
+
+                })
+            }
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+
+
+
+    <div id="movie">
+        <div class="active">王安安的前端日记</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+
+</body>
+</html>
